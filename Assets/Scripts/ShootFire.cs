@@ -3,6 +3,7 @@ using UnityEngine;
 public class ShootFire : MonoBehaviour
 {
     public Camera Cam;
+    public HealthComponent healthComponent;
 
     void Update()
     {
@@ -18,7 +19,11 @@ public class ShootFire : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
             Debug.DrawRay(Cam.transform.position, Cam.transform.forward * 100, Color.red, 2.0f);
+            healthComponent.ApplyDamage(10f);
+
 
         }
     }
+
+
 }
