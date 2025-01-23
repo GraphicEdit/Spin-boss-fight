@@ -15,11 +15,15 @@ public class ShootFire : MonoBehaviour
 
     void FireCast()
     {
-        if (Cam != null && Physics.Raycast(Cam.transform.position, Cam.transform.forward, out RaycastHit hit, 100))
+        if (Physics.Raycast(Cam.transform.position, Cam.transform.forward, out RaycastHit hit, 100))
         {
             Debug.Log(hit.transform.name);
             Debug.DrawRay(Cam.transform.position, Cam.transform.forward * 100, Color.red, 2.0f);
-            healthComponent.ApplyDamage(10f);
+
+            if (hit.transform.CompareTag("Enemy"))
+            {
+                healthComponent.ApplyDamage(10f);
+            }
 
 
         }

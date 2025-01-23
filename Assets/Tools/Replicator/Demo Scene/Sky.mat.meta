@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6ba1f728a3c9b344d9154d4b214f104a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245358
+  packageName: Replicator - Duplication Tools
+  packageVersion: 1.0.0
+  assetPath: Assets/Replicator/Demo Scene/Sky.mat
+  uploadId: 561520

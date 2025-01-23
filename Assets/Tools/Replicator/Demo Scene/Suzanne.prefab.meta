@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b1950c1230d10b74db48e15ac4b9bf7a
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245358
+  packageName: Replicator - Duplication Tools
+  packageVersion: 1.0.0
+  assetPath: Assets/Replicator/Demo Scene/Suzanne.prefab
+  uploadId: 561520

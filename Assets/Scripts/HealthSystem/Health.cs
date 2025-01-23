@@ -67,6 +67,11 @@ public class Health : HealthComponent
             return;
         }
 
+        if (CurrentHealth <= 0.0f)
+        {
+            OnHealthEmpty?.Invoke();
+        }
+
         float previousHealth = CurrentHealth;
 
         CurrentHealth = Mathf.Clamp(CurrentHealth - damage, 0, MaxHealth);

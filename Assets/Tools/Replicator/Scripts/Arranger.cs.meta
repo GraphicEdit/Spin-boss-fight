@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 432b12fced6e54db19c39265368e94e0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245358
+  packageName: Replicator - Duplication Tools
+  packageVersion: 1.0.0
+  assetPath: Assets/Replicator/Scripts/Arranger.cs
+  uploadId: 561520

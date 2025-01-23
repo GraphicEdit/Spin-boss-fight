@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b5bfb3613e9a34395b1c06c0211f4338
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 245358
+  packageName: Replicator - Duplication Tools
+  packageVersion: 1.0.0
+  assetPath: Assets/Replicator/Editor/ReplicatorControllerEditor.cs
+  uploadId: 561520
