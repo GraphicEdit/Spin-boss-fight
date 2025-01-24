@@ -116,7 +116,7 @@ public class MoveCTRLDemo : MonoBehaviour {
 				if ( CheckAniClip( "dead" ) == false ) return;
 
 				GetComponent<Animation>().CrossFade("dead",0.2f);
-				//					animation.CrossFadeQueued("idle_normal");
+				//animation.CrossFadeQueued("idle_normal");
 			} 
 
 

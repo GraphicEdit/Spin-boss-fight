@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BG
+  m_Shader: {fileID: 4800000, guid: 5e444cd13928b274babcaedb447ba3ef, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _FOGBOTTOM_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - <noninit>:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex:
+        m_Texture: {fileID: 8900000, guid: b9994499e68ddd547b0538f7c1c8c6f5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - <noninit>: 0
+    - _Exposure: 1.33
+    - _FogBottom: 1
+    - _FogEnd: 0.116
+    - _FogIntens: 0.29
+    - _FogStart: 0
+    - _MieIntens: 0
+    - _MieSize: 0
+    - _Rotation: 0
+    - _SunDir: 0
+    m_Colors:
+    - <noninit>: {r: 0, g: 2.0182498, b: 1e-45, a: 1.2904559e-15}
+    - _FogCol: {r: 1, g: 0, b: 0.6971979, a: 0.5}
+    - _MieTint: {r: 1, g: 1, b: 1, a: 0.5}
+    - _Tint: {r: 0.509434, g: 0.0744927, b: 0.38306585, a: 0.5}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
