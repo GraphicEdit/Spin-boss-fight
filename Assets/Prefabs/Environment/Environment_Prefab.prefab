@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8801921247092917367}
   - component: {fileID: 4703829144703215934}
   - component: {fileID: 2983346795147255613}
+  - component: {fileID: 4749436309902501007}
+  - component: {fileID: 8283303065612536229}
   m_Layer: 0
   m_Name: Cube.003 (8)
   m_TagString: Untagged
@@ -65,8 +67,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,9 +109,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &4749436309902501007
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91734890361806219}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8283303065612536229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91734890361806219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &132710792973093291
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,6 +204,8 @@ GameObject:
   - component: {fileID: 554002840533450537}
   - component: {fileID: 3290050654505116480}
   - component: {fileID: 923987382841719781}
+  - component: {fileID: 5457198570956722991}
+  - component: {fileID: 7657564971645494968}
   m_Layer: 0
   m_Name: Cube.003 (6)
   m_TagString: Untagged
@@ -175,8 +259,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,9 +301,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &5457198570956722991
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132710792973093291}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7657564971645494968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132710792973093291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &283707255626936313
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +415,6 @@ Transform:
   m_Children:
   - {fileID: 4000609644229511941}
   - {fileID: 4754610598603330193}
-  - {fileID: 5828118084294122911}
   - {fileID: 8795778367749801808}
   - {fileID: 5900528338110035823}
   - {fileID: 2257537049330062568}
@@ -332,8 +495,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -499,6 +662,8 @@ GameObject:
   - component: {fileID: 4276953861381567281}
   - component: {fileID: 8836539508212567487}
   - component: {fileID: 3735666910748051379}
+  - component: {fileID: 5667473192976593825}
+  - component: {fileID: 8310348667997489421}
   m_Layer: 0
   m_Name: Cube.004 (1)
   m_TagString: Untagged
@@ -552,8 +717,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -594,9 +759,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5053925668127403250, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &5667473192976593825
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502173296090077627}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8310348667997489421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502173296090077627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &579732080671038191
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +854,8 @@ GameObject:
   - component: {fileID: 3320402544222083914}
   - component: {fileID: 3974711031370009694}
   - component: {fileID: 5205910717073145137}
+  - component: {fileID: 6012466173086014591}
+  - component: {fileID: 4565992694994061483}
   m_Layer: 0
   m_Name: Cube.003 (3)
   m_TagString: Untagged
@@ -662,8 +909,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -704,9 +951,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &6012466173086014591
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579732080671038191}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4565992694994061483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579732080671038191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &783217859740325053
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +1046,8 @@ GameObject:
   - component: {fileID: 3427431053604696721}
   - component: {fileID: 5196430298105952447}
   - component: {fileID: 2911547705886543377}
+  - component: {fileID: 8909463278421292110}
+  - component: {fileID: 4754060661563400955}
   m_Layer: 0
   m_Name: Cube.005 (2)
   m_TagString: Untagged
@@ -772,8 +1101,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -814,9 +1143,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &8909463278421292110
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783217859740325053}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4754060661563400955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783217859740325053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &920948554838152831
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,8 +1291,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -992,8 +1401,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1102,8 +1511,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1248,8 +1657,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1358,8 +1767,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1525,6 +1934,8 @@ GameObject:
   - component: {fileID: 1516135836855478261}
   - component: {fileID: 4979474740184241882}
   - component: {fileID: 1645537053191782171}
+  - component: {fileID: 8260684100036563324}
+  - component: {fileID: 5634457762008359075}
   m_Layer: 0
   m_Name: Cube.003 (9)
   m_TagString: Untagged
@@ -1578,8 +1989,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1620,9 +2031,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &8260684100036563324
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533913547521154760}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5634457762008359075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533913547521154760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &1534313195251342369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +2126,8 @@ GameObject:
   - component: {fileID: 8531525457311714378}
   - component: {fileID: 2125143301324400130}
   - component: {fileID: 8256389215328383547}
+  - component: {fileID: 1678708295317336858}
+  - component: {fileID: 1320942646237189376}
   m_Layer: 0
   m_Name: Cube.003 (7)
   m_TagString: Untagged
@@ -1688,8 +2181,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1730,9 +2223,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &1678708295317336858
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534313195251342369}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1320942646237189376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534313195251342369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &1610457055283017151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,8 +2481,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2154,6 +2727,8 @@ GameObject:
   - component: {fileID: 603833991917351909}
   - component: {fileID: 4516222740393646797}
   - component: {fileID: 480313222097888383}
+  - component: {fileID: 7367426880360986126}
+  - component: {fileID: 4749100310571921731}
   m_Layer: 0
   m_Name: Cube.021 (3)
   m_TagString: Untagged
@@ -2207,8 +2782,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2249,9 +2824,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2746142260806068395, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &7367426880360986126
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928819754748953016}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4749100310571921731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928819754748953016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &1934806171391820490
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,8 +2972,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2427,8 +3082,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2610,6 +3265,8 @@ GameObject:
   - component: {fileID: 4487086672574235657}
   - component: {fileID: 2581060109576468405}
   - component: {fileID: 811115197354584212}
+  - component: {fileID: 3250203974043237873}
+  - component: {fileID: 9175258140587705698}
   m_Layer: 0
   m_Name: Cube.021 (2)
   m_TagString: Untagged
@@ -2663,8 +3320,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2705,9 +3362,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2746142260806068395, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &3250203974043237873
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113492092122688388}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &9175258140587705698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113492092122688388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &2177390288169588929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,8 +3542,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2862,6 +3599,8 @@ GameObject:
   - component: {fileID: 769488103653903399}
   - component: {fileID: 616765033123770768}
   - component: {fileID: 4745377255454184528}
+  - component: {fileID: 7847344376513512159}
+  - component: {fileID: 504402887026016354}
   m_Layer: 0
   m_Name: Cube.005 (4)
   m_TagString: Untagged
@@ -2915,8 +3654,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2957,9 +3696,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &7847344376513512159
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405341061684450332}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &504402887026016354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405341061684450332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &2564887427187533523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,6 +3791,8 @@ GameObject:
   - component: {fileID: 4008336617501841075}
   - component: {fileID: 8755629151774313445}
   - component: {fileID: 3801957507214957264}
+  - component: {fileID: 1422747808839965257}
+  - component: {fileID: 6062050119252625029}
   m_Layer: 0
   m_Name: Cube.003 (10)
   m_TagString: Untagged
@@ -3025,8 +3846,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3067,9 +3888,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &1422747808839965257
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564887427187533523}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6062050119252625029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564887427187533523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &2783253081961907955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,6 +3983,8 @@ GameObject:
   - component: {fileID: 7242450004481435093}
   - component: {fileID: 4256076741392076172}
   - component: {fileID: 6143293700123660450}
+  - component: {fileID: 1311730842074709990}
+  - component: {fileID: 181492611447301503}
   m_Layer: 0
   m_Name: Cube.005 (6)
   m_TagString: Untagged
@@ -3135,8 +4038,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3177,9 +4080,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &1311730842074709990
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783253081961907955}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &181492611447301503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2783253081961907955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &2921478460862901978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,8 +4260,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3387,8 +4370,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3497,8 +4480,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3717,8 +4700,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3861,8 +4844,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3971,8 +4954,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4081,8 +5064,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4191,8 +5174,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4236,6 +5219,135 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!1 &3693533117138266767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8331596556241048919}
+  - component: {fileID: 8753364564413170051}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8331596556241048919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3693533117138266767}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8659065027014544348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &8753364564413170051
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3693533117138266767}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3369d0f8fe8bcb54daee528b26ee74b9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: c8f8b0ef7762ff44db09f386473bc170, type: 3}
+  m_Resource: {fileID: 8300000, guid: c8f8b0ef7762ff44db09f386473bc170, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3699771562198276344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4447,8 +5559,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4557,8 +5669,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4702,8 +5814,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4812,8 +5924,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4922,8 +6034,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5011,6 +6123,8 @@ GameObject:
   - component: {fileID: 1991996107519830071}
   - component: {fileID: 7178528867625143786}
   - component: {fileID: 60961722920926177}
+  - component: {fileID: 1232204251548428745}
+  - component: {fileID: 2095038065960693140}
   m_Layer: 0
   m_Name: Cube.028 (1)
   m_TagString: Untagged
@@ -5064,8 +6178,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5106,9 +6220,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8467973019869391972, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &1232204251548428745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846216095587299773}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2095038065960693140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846216095587299773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &4875515018413077582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5140,9 +6334,7 @@ Transform:
   m_LocalScale: {x: 74.5, y: 0.0056697116, z: 74.5}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5522623284828520022}
   - {fileID: 7882561950639017398}
-  - {fileID: 725050803347329122}
   - {fileID: 3476927425977029425}
   - {fileID: 8392318169624936825}
   - {fileID: 3684732734244364196}
@@ -5299,8 +6491,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5356,6 +6548,8 @@ GameObject:
   - component: {fileID: 3108612624814108532}
   - component: {fileID: 1335017520215290156}
   - component: {fileID: 1035936231083741556}
+  - component: {fileID: 4869012777134714348}
+  - component: {fileID: 5198141744712837245}
   m_Layer: 0
   m_Name: Cube.005 (5)
   m_TagString: Untagged
@@ -5409,8 +6603,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5451,9 +6645,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &4869012777134714348
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4967461623174084441}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5198141744712837245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4967461623174084441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &5269655355164971703
 GameObject:
   m_ObjectHideFlags: 0
@@ -5519,8 +6793,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5576,6 +6850,8 @@ GameObject:
   - component: {fileID: 296757430994939966}
   - component: {fileID: 1821720395652401180}
   - component: {fileID: 3476910571663378760}
+  - component: {fileID: 2731955849836639337}
+  - component: {fileID: 8569708866644763946}
   m_Layer: 0
   m_Name: Cube.028 (2)
   m_TagString: Untagged
@@ -5629,8 +6905,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5671,9 +6947,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8467973019869391972, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &2731955849836639337
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465443422117536464}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8569708866644763946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465443422117536464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &5480952642133548717
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,6 +7042,8 @@ GameObject:
   - component: {fileID: 5608131936932681705}
   - component: {fileID: 900147118660195280}
   - component: {fileID: 7520487343652662169}
+  - component: {fileID: 697940787665526492}
+  - component: {fileID: 8663021308045150435}
   m_Layer: 0
   m_Name: Cube.028 (3)
   m_TagString: Untagged
@@ -5739,8 +7097,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5781,9 +7139,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8467973019869391972, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &697940787665526492
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480952642133548717}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8663021308045150435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480952642133548717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &5642564649134267948
 GameObject:
   m_ObjectHideFlags: 0
@@ -5849,8 +7287,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5959,8 +7397,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6069,8 +7507,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6254,8 +7692,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6421,6 +7859,8 @@ GameObject:
   - component: {fileID: 4837734635950498300}
   - component: {fileID: 4408993953443903083}
   - component: {fileID: 5807068650890174660}
+  - component: {fileID: 6963035237173618855}
+  - component: {fileID: 657441740046189199}
   m_Layer: 0
   m_Name: Cube.003 (5)
   m_TagString: Untagged
@@ -6474,8 +7914,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6516,9 +7956,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &6963035237173618855
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365619165200676065}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &657441740046189199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6365619165200676065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &6443144822569125359
 GameObject:
   m_ObjectHideFlags: 0
@@ -6584,8 +8104,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6664,37 +8184,6 @@ Transform:
   - {fileID: 4886782337715632232}
   - {fileID: 8888071400332064741}
   - {fileID: 196082127382737434}
-  m_Father: {fileID: 7743919220332603726}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6592732265838171569
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5522623284828520022}
-  m_Layer: 0
-  m_Name: Link1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5522623284828520022
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6592732265838171569}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.101, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
   m_Father: {fileID: 7743919220332603726}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6654430598456132329
@@ -6819,6 +8308,8 @@ GameObject:
   - component: {fileID: 4059609790810358975}
   - component: {fileID: 8693653919355348249}
   - component: {fileID: 3642436879935186201}
+  - component: {fileID: 304048419229060793}
+  - component: {fileID: 3202814721530014543}
   m_Layer: 0
   m_Name: Cube.003 (4)
   m_TagString: Untagged
@@ -6872,8 +8363,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6914,9 +8405,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &304048419229060793
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660810809329493121}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3202814721530014543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660810809329493121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &6882082944764180723
 GameObject:
   m_ObjectHideFlags: 0
@@ -6929,6 +8500,8 @@ GameObject:
   - component: {fileID: 5015429787372883579}
   - component: {fileID: 8699918493182572322}
   - component: {fileID: 5990973468010208355}
+  - component: {fileID: 1532742610432415952}
+  - component: {fileID: 1274628599964369524}
   m_Layer: 0
   m_Name: Cube.028
   m_TagString: Untagged
@@ -6982,8 +8555,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7024,9 +8597,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8467973019869391972, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &1532742610432415952
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882082944764180723}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1274628599964369524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882082944764180723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &6919700786246197346
 GameObject:
   m_ObjectHideFlags: 0
@@ -7137,37 +8790,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -153830957423991239, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
---- !u!1 &7052278445303655009
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 725050803347329122}
-  m_Layer: 0
-  m_Name: Link3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &725050803347329122
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7052278445303655009}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.06705755, z: -0, w: 0.99774915}
-  m_LocalPosition: {x: 0.0092, y: 1.7637582, z: -0.027}
-  m_LocalScale: {x: 0.01342282, y: 176.37582, z: 0.01342282}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 7743919220332603726}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7158761198627672563
 GameObject:
   m_ObjectHideFlags: 0
@@ -7180,6 +8802,8 @@ GameObject:
   - component: {fileID: 4959029485646008491}
   - component: {fileID: 1249437975950205767}
   - component: {fileID: 8213359262015466279}
+  - component: {fileID: 6170125024384014388}
+  - component: {fileID: 4706722734384183550}
   m_Layer: 0
   m_Name: Cube.021 (4)
   m_TagString: Untagged
@@ -7233,8 +8857,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7275,9 +8899,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2746142260806068395, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &6170125024384014388
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158761198627672563}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &4706722734384183550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7158761198627672563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &7453314398973202650
 GameObject:
   m_ObjectHideFlags: 0
@@ -7343,8 +9047,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7453,8 +9157,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7563,8 +9267,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7673,8 +9377,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7730,6 +9434,8 @@ GameObject:
   - component: {fileID: 6931214009190069432}
   - component: {fileID: 1923863713524702289}
   - component: {fileID: 6647399774833604644}
+  - component: {fileID: 5082437806128511224}
+  - component: {fileID: 73196501995881109}
   m_Layer: 0
   m_Name: Cube.028 (4)
   m_TagString: Untagged
@@ -7783,8 +9489,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7825,9 +9531,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8467973019869391972, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &5082437806128511224
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969695116238099776}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &73196501995881109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7969695116238099776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &8004672620766002704
 GameObject:
   m_ObjectHideFlags: 0
@@ -7893,8 +9679,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8112,8 +9898,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8261,8 +10047,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8794,6 +10580,8 @@ GameObject:
   - component: {fileID: 3181422977365784078}
   - component: {fileID: 522664126728746241}
   - component: {fileID: 1388515034227031089}
+  - component: {fileID: 3053637104567097704}
+  - component: {fileID: 5394478961953197189}
   m_Layer: 0
   m_Name: Cube.028 (1)
   m_TagString: Untagged
@@ -8847,8 +10635,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8889,9 +10677,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8467973019869391972, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+--- !u!54 &3053637104567097704
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9002309309448077170}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5394478961953197189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9002309309448077170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &9091913619042606285
 GameObject:
   m_ObjectHideFlags: 0
@@ -8904,6 +10772,8 @@ GameObject:
   - component: {fileID: 6897566613305433860}
   - component: {fileID: 4867378646683649443}
   - component: {fileID: 2407979332049872231}
+  - component: {fileID: 479513351388251140}
+  - component: {fileID: 3912952672488736625}
   m_Layer: 0
   m_Name: Cube.005 (3)
   m_TagString: Untagged
@@ -8957,8 +10827,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+  - {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8999,119 +10869,89 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2212009239438826721, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
---- !u!1 &9114981012832144281
-GameObject:
+--- !u!54 &479513351388251140
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5828118084294122911}
-  - component: {fileID: 5927235641977424443}
-  - component: {fileID: 4733616077306322546}
-  - component: {fileID: 5358504327571044521}
-  m_Layer: 0
-  m_Name: Cube.008 (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5828118084294122911
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9114981012832144281}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.29990184, y: -0.64044565, z: -0.64022213, w: -0.30000654}
-  m_LocalPosition: {x: -2.7, y: -6.2, z: 10.1}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 622691447239898435}
-  m_LocalEulerAnglesHint: {x: -89.98, y: -230.2, z: 0}
---- !u!33 &5927235641977424443
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9114981012832144281}
-  m_Mesh: {fileID: 8552134717624371188, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
---- !u!23 &4733616077306322546
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9114981012832144281}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  - {fileID: 2100000, guid: 0715d0c7507862942879883589af5d7d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5358504327571044521
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9114981012832144281}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 9091913619042606285}
+  serializedVersion: 4
+  m_Mass: 9
+  m_Drag: 1
+  m_AngularDrag: 1
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3912952672488736625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091913619042606285}
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8552134717624371188, guid: 04010b1119dd4fb4bb74923b0006723e, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fc9178a0b0c3d4bb8b6d91b16d9893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerOptions:
+    triggerType: 0
+    minimumCollisionForce: 1000
+    filterCollisionsByTag: 1
+    triggerAllowedTags:
+    - Projectile
+    triggerKey: 0
+  fractureOptions:
+    fragmentCount: 50
+    xAxis: 1
+    yAxis: 1
+    zAxis: 1
+    detectFloatingFragments: 0
+    asynchronous: 0
+    insideMaterial: {fileID: 2100000, guid: 5d82eb612157cf846bf67968cdb100a7, type: 2}
+    textureScale: {x: 1, y: 1}
+    textureOffset: {x: 0, y: 0}
+  refractureOptions:
+    enableRefracturing: 0
+    maxRefractureCount: 1
+    invokeCallbacks: 0
+  callbackOptions:
+    onFracture:
+      m_PersistentCalls:
+        m_Calls: []
+    onCompleted:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8753364564413170051}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  currentRefractureCount: 0
 --- !u!1 &9218037302958273832
 GameObject:
   m_ObjectHideFlags: 0
@@ -9142,6 +10982,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8331596556241048919}
   - {fileID: 7259499157278531685}
   - {fileID: 622691447239898435}
   m_Father: {fileID: 0}

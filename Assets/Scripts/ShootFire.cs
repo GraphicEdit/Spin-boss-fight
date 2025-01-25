@@ -7,6 +7,9 @@ public class ShootFire : MonoBehaviour
     public HealthComponent healthComponent;
     public AudioSource audioSource;
 
+    public GameObject projectile;
+    public float initialVelocity;
+
     void Update()
     {
 
@@ -25,6 +28,12 @@ public class ShootFire : MonoBehaviour
         {
             //Debug.Log(hit.transform.name);
             //Debug.DrawRay(Cam.transform.position, Cam.transform.forward * 100, Color.red, 2.0f);
+            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Projectile"))
+            {
+                GameObject.Destroy(obj);
+            }
+            var projectileInstance = GameObject.Instantiate(projectile, this.transform.position, Quaternion.identity);
+            projectileInstance.GetComponent<Rigidbody>().linearVelocity = initialVelocity * this.transform.forward;
 
             if (hit.transform.CompareTag("Enemy"))
             {

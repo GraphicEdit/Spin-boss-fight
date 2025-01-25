@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    private Transform _camera;
+    private Transform _target;
 
 
     void Start()
     {
 
-        _camera = Camera.main.transform;
+        _target = Camera.main.transform;
 
     }
 
 
     void Update()
     {
-
-        transform.LookAt(_camera);
+        transform.LookAt(new Vector3(_target.position.x, transform.position.y, _target.position.z));
+        //transform.LookAt(_target);
     }
 }
