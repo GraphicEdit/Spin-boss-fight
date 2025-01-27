@@ -10,6 +10,9 @@ public class ShootFire : MonoBehaviour
     public GameObject projectile;
     public float initialVelocity;
 
+    readonly System.Random m_random = new();
+    int randomAttack;
+
     void Update()
     {
 
@@ -35,9 +38,19 @@ public class ShootFire : MonoBehaviour
             var projectileInstance = GameObject.Instantiate(projectile, this.transform.position, Quaternion.identity);
             projectileInstance.GetComponent<Rigidbody>().linearVelocity = initialVelocity * this.transform.forward;
 
+            /* if (hit.transform.CompareTag("Enemy"))
+             {
+                 healthComponent.ApplyDamage(10f);
+             }
+             */
             if (hit.transform.CompareTag("Enemy"))
             {
-                healthComponent.ApplyDamage(10f);
+                randomAttack = m_random.Next(1, 10);
+
+                if (randomAttack == 1)
+                {
+                    healthComponent.ApplyDamage(50f);
+                }
             }
 
         }

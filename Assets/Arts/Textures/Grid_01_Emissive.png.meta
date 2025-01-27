@@ -144,9 +144,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 196525
-  packageName: Starter Assets - FirstPerson | Updates in new CharacterController
-    package
-  packageVersion: 1.3
-  assetPath: Assets/Environment/Art/Textures/Grid_01_Emissive.png
-  uploadId: 691166
+  productId: 257362
+  packageName: Bro Audio
+  packageVersion: 1.14
+  assetPath: Assets/Arts/Textures/Grid_01_Emissive.png
+  uploadId: 711158

@@ -147,8 +147,8 @@ GameObject:
   - component: {fileID: 5393215578589016654}
   - component: {fileID: 5393215578589016655}
   - component: {fileID: 5393215578589016640}
-  - component: {fileID: 5573981753261538062}
   - component: {fileID: 4757335575436660580}
+  - component: {fileID: 2239872126045794420}
   m_Layer: 0
   m_Name: CapsulePlayer
   m_TagString: Player
@@ -186,7 +186,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5393215578589016642}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -202,7 +202,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b911390c5825014e8377183a7837d3f, type: 2}
+  - {fileID: 2100000, guid: 979aef027a1c86c42a15ce35fce366fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -247,18 +247,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5573981753261538062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5393215578589016642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 407bc93e190e1d047a0b22fef51bb452, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4757335575436660580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +261,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   initialRatio: 1
+--- !u!114 &2239872126045794420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5393215578589016642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a0ab862be2bcb44a1bc70e1e621661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5605822147690962821
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +669,8 @@ MonoBehaviour:
   VFX: {fileID: 1406491949023017108}
   healthComponent: {fileID: 0}
   audioSource: {fileID: 4595324203816631079}
+  projectile: {fileID: 8458539278128416036, guid: 63e72ec745546da4dbafa46fa5619376, type: 3}
+  initialVelocity: 30
 --- !u!54 &814387397939865063
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -691,7 +693,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
