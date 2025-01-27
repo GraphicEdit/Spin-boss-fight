@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyStatesAttack : MonoBehaviour
 {
@@ -6,13 +7,11 @@ public class EnemyStatesAttack : MonoBehaviour
     readonly System.Random m_random = new();
     int randomAttack;
     private Animation anim;
-    public float CurrentHealth { get; set; }
-    public bool IsAlive => CurrentHealth > 0.0f;
+    public GameObject DamageVFX;
 
     void Start()
     {
         anim = gameObject.GetComponent<Animation>();
-
     }
 
 
@@ -35,8 +34,20 @@ public class EnemyStatesAttack : MonoBehaviour
         if (randomAttack == 1)
         {
             healthComponent.ApplyDamage(1f);
+
+            DamageVFX.SetActive(true);
+            StartCoroutine(waiter());
         }
 
 
     }
+
+    private IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(.1f);
+        DamageVFX.SetActive(false);
+
+
+    }
+
 }

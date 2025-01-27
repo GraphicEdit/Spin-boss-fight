@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407bc93e190e1d047a0b22fef51bb452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Screen: {fileID: 0}
 --- !u!4 &103082167721105597 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013314187654, guid: a967089208f523246bbb4911dd5cde5c, type: 3}

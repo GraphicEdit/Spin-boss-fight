@@ -1,9 +1,10 @@
 using UnityEngine;
-
+using System.Collections;
 
 public class CallHealthPlayer : MonoBehaviour
 {
     HealthComponent HealthComponent { get; set; }
+    public GameObject Screen;
 
     private void Awake()
     {
@@ -14,7 +15,10 @@ public class CallHealthPlayer : MonoBehaviour
 
     private void OnHealthEmpty()
     {
-        //Destroy(gameObject, 1.0f);
+
+        Screen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
 
     }
