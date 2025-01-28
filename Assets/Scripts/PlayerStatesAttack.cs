@@ -1,17 +1,26 @@
 using UnityEngine;
 
-public class ShootFire : MonoBehaviour
+public class PlayerStatesAttack : MonoBehaviour
 {
     public Camera Cam;
     public GameObject VFX;
     public HealthComponent healthComponent;
     public AudioSource audioSource;
+    public Animation anim;
 
     public GameObject projectile;
     public float initialVelocity;
 
     readonly System.Random m_random = new();
     int randomAttack;
+
+
+    void Start()
+    {
+
+        anim["damage_001"].layer = 123;
+    }
+
 
     void Update()
     {
@@ -49,7 +58,10 @@ public class ShootFire : MonoBehaviour
 
                 if (randomAttack == 1)
                 {
-                    healthComponent.ApplyDamage(50f);
+                    healthComponent.ApplyDamage(10f);
+
+                    anim.Play("damage_001");
+
                 }
             }
 

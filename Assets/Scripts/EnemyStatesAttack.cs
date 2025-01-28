@@ -21,8 +21,9 @@ public class EnemyStatesAttack : MonoBehaviour
         //if (other.CompareTag("Player") && IsAlive)
         if (other.CompareTag("Player"))
         {
-            anim.CrossFade("attack_short_001", 0.0f);
-            anim.CrossFadeQueued("idle_combat");
+            //anim.CrossFade("attack_short_001", 0.0f);
+            anim.Play("attack_short_001");
+            //anim.CrossFadeQueued("idle_combat");
             Attack();
         }
     }
