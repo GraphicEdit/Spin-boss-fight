@@ -18,6 +18,8 @@ public class DeadPlayer : MonoBehaviour
         Screen.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        //Time.timeScale = 0;
+        AudioListener.pause = true;
 
     }
 }

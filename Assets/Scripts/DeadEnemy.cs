@@ -30,6 +30,7 @@ public class DeadEnemy : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         //Time.timeScale = 0;
+        AudioListener.pause = true;
 
     }
 
